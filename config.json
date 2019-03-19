@@ -1,0 +1,31 @@
+{
+    "wider_train": {
+        "image_dir": "/home/luojiapeng/datasets/widerface/WIDER_train/images",
+        "txt_path": "/home/luojiapeng/datasets/widerface/wider_face_split/wider_face_train_bbx_gt.txt"
+    },
+    "wider_val": {
+        "image_dir": "/home/luojiapeng/datasets/widerface/WIDER_val/images",
+        "mat_path": "/home/luojiapeng/datasets/widerface/wider_face_split/wider_face_val.mat"
+    },
+    "wider_test": {
+        "image_dir": "/home/luojiapeng/datasets/widerface/WIDER_test/images",
+        "mat_path": "/home/luojiapeng/datasets/widerface/wider_face_split/wider_face_test.mat"
+    },
+
+
+    "train": {
+        "enable_cuda": true,
+        "GPUS": [7],
+        "image_shape": 512,
+        "_batch_size": "batch size per GPU",
+        "batch_size": 8,
+        "iou_thres": 0.35,
+        "checkpoint_path": "checkpoints/origin",
+        "summary_every_steps": 1000
+    },
+
+    "network":{
+        "anchor_sizes": [16, 24, 36],
+        "strides": [8, 8, 8]
+    }
+}
